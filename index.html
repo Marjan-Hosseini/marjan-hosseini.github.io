@@ -1,11 +1,332 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title>Title</title>-->
-<!--</head>-->
-<!--<body>-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Marjan Hosseini — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Marjan Hosseini — Ph.D. candidate in Computer Science & Engineering at the University of Connecticut. Computational biology, Bayesian ML, and high-throughput sequencing.">
 
-<!--</body>-->
-<!--</html>-->
-<meta http-equiv="refresh" content="0; url=resume.html" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Simple white/pink icon in the tab (data-URL SVG) -->
+  <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='56' rx='14' ry='14' fill='%23ffffff' stroke='%23ff5c9a' stroke-width='4'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-family='Georgia, Times New Roman, serif' font-size='24' font-style='italic' font-weight='700' fill='%23ff5c9a'%3EMH%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script defer src="script.js"></script>
+</head>
+<body id="top">
+
+  <!-- LEFT RAIL (section navigation icons) -->
+  <aside class="left-rail" aria-label="Section navigation">
+    <nav class="side-nav">
+      <!-- About -->
+      <a href="#about" class="nav-item" data-section="about">
+        <div class="nav-icon">
+          <!-- user icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="8" r="3"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </div>
+        <span class="nav-label">About</span>
+      </a>
+
+      <!-- Education -->
+      <a href="#education" class="nav-item" data-section="education">
+        <div class="nav-icon">
+          <!-- cap icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 10L12 5 2 10l10 5 10-5z"></path>
+            <path d="M6 12v5a6 6 0 0 0 12 0v-5"></path>
+          </svg>
+        </div>
+        <span class="nav-label">Education</span>
+      </a>
+
+      <!-- Experience -->
+      <a href="#experience" class="nav-item" data-section="experience">
+        <div class="nav-icon">
+          <!-- briefcase -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+          </svg>
+        </div>
+        <span class="nav-label">Experience</span>
+      </a>
+
+      <!-- Publications -->
+      <a href="#publications" class="nav-item" data-section="publications">
+        <div class="nav-icon">
+          <!-- document icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="5" y="3" width="12" height="18" rx="1.5"></rect>
+            <path d="M9 7h6"></path>
+            <path d="M9 11h6"></path>
+            <path d="M9 15h4"></path>
+          </svg>
+        </div>
+        <span class="nav-label">Publications</span>
+      </a>
+
+      <!-- Projects -->
+      <a href="#projects" class="nav-item" data-section="projects">
+        <div class="nav-icon">
+          <!-- gears icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <!-- big gear -->
+            <circle cx="15" cy="9" r="2.4"></circle>
+            <path d="M15 5.5v-1.5"></path>
+            <path d="M15 14v-1.5"></path>
+            <path d="M11.8 9h-1.6"></path>
+            <path d="M19.8 9h-1.6"></path>
+            <path d="M12.7 6.7l-1.1-1.1"></path>
+            <path d="M18.4 12.4l-1.1-1.1"></path>
+            <path d="M12.7 11.3l-1.1 1.1"></path>
+            <path d="M18.4 5.6l-1.1 1.1"></path>
+
+            <!-- small gear -->
+            <circle cx="7" cy="15" r="1.8"></circle>
+            <path d="M7 12.2v-.9"></path>
+            <path d="M7 18.8v-.9"></path>
+            <path d="M4.2 15H3.3"></path>
+            <path d="M10.7 15H9.8"></path>
+            <path d="M5.3 13.3l-.7-.7"></path>
+            <path d="M9.4 17.4l-.7-.7"></path>
+            <path d="M5.3 16.7l-.7.7"></path>
+            <path d="M9.4 12.6l-.7.7"></path>
+          </svg>
+        </div>
+        <span class="nav-label">Projects</span>
+      </a>
+
+      <!-- Skills -->
+      <a href="#skills" class="nav-item" data-section="skills">
+        <div class="nav-icon">
+          <!-- code arrows -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 18l6-6-6-6"></path>
+            <path d="M8 6l-6 6 6 6"></path>
+          </svg>
+        </div>
+        <span class="nav-label">Skills</span>
+      </a>
+    </nav>
+  </aside>
+
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- LEFT COLUMN: sticky profile -->
+      <div class="left-column">
+        <aside class="profile-card" aria-labelledby="name">
+          <div class="profile-main">
+            <div class="avatar">
+              <img src="pics/profile_pic.jpg" alt="Marjan Hosseini" class="avatar-img">
+            </div>
+
+            <h1 id="name">Marjan Hosseini</h1>
+            <p class="tagline">
+              Ph.D. Candidate — Computer Science &amp; Engineering,<br>
+              University of Connecticut
+            </p>
+
+            <ul class="profile-contact">
+              <li>Computer Science &amp; Engineering Dept., UConn, Storrs, CT 06268, USA</li>
+              <li><a href="mailto:marjan.hosseini@uconn.edu">marjan.hosseini@uconn.edu</a></li>
+            </ul>
+
+            <div class="social-icons">
+              <a class="icon-btn" href="mailto:marjan.hosseini@uconn.edu" aria-label="Email">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <path d="M3 7l9 6l9-6"></path>
+                </svg>
+              </a>
+              <a class="icon-btn" href="https://github.com/marjan-hosseini" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.12-1.45-1.12-1.45-.91-.62.07-.61.07-.61 1 .07 1.53 1.06 1.53 1.06.9 1.54 2.36 1.1 2.94.84a2.2 2.2 0 0 1 .66-1.38c-2.22-.26-4.55-1.11-4.55-4.92a3.84 3.84 0 0 1 1-2.66 3.3 3.3 0 0 1 .09-2.63s.84-.27 2.75 1.02a9.4 9.4 0 0 1 5 0c1.9-1.29 2.75-1.02 2.75-1.02a3.3 3.3 0 0 1 .09 2.63 3.84 3.84 0 0 1 1 2.66c0 3.82-2.34 4.66-4.57 4.91a2.5 2.5 0 0 1 .71 1.94v2.87c0 .26.18.57.69.48A10 10 0 0 0 12 2z"></path>
+                </svg>
+              </a>
+              <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <!-- placeholder; fill with actual URL if desired -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 4h4v16H4z"></path>
+                  <circle cx="6" cy="3" r="2"></circle>
+                  <path d="M10 10h4v2.5a3.5 3.5 0 0 1 7 0V20h-4v-6.5a1.5 1.5 0 0 0-3 0V20h-4z"></path>
+                </svg>
+              </a>
+              <a class="icon-btn" href="https://scholar.google.com" target="_blank" rel="noopener" aria-label="Google Scholar">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3L3 9l9 6 9-6-9-6z"></path>
+                  <path d="M6 13v4l6 4 6-4v-4"></path>
+                </svg>
+              </a>
+            </div>
+
+            <!-- CV download -->
+            <a class="btn primary cv-btn" href="CV/Marjan_CV_New.pdf" download="Marjan_Hosseini_CV">
+              <span>Download CV</span>
+            </a>
+
+            <!-- mobile section shortcuts -->
+            <nav class="section-nav m-section-nav" aria-label="Sections">
+              <a href="#about"        data-section="about">About</a>
+              <a href="#education"    data-section="education">Education</a>
+              <a href="#experience"   data-section="experience">Experience</a>
+              <a href="#publications" data-section="publications">Publications</a>
+              <a href="#projects"     data-section="projects">Projects</a>
+              <a href="#skills"       data-section="skills">Skills</a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+
+      <!-- RIGHT COLUMN: main content -->
+      <main class="content">
+
+        <section id="about" class="section section-card">
+          <h2>About</h2>
+          <p>
+            I am a Ph.D. candidate in Computer Science and Engineering at the University of Connecticut, working at the
+            intersection of computational biology, Bayesian machine learning, and large-scale data analysis. My work
+            focuses on modeling high-throughput sequencing data (e.g., nanopore), building end-to-end ML pipelines, and
+            designing probabilistic models that quantify uncertainty in noisy biological signals.
+          </p>
+          <p>
+            I have over a decade of experience in research and engineering roles spanning academia and industry,
+            including work on feature selection for high-dimensional genomics, GPU performance modeling, cloud
+            optimization, and signal/image processing for smart devices.
+          </p>
+        </section>
+
+        <section id="education" class="section section-card">
+          <h2>Education</h2>
+          <ul class="facts">
+            <li><strong>Ph.D., Computer Science &amp; Engineering</strong> — University of Connecticut, USA (Expected 2026)</li>
+            <li><strong>M.Sc., Computer Science &amp; Engineering</strong> — Politecnico di Milano, Italy (2018, summa cum laude)</li>
+            <li><strong>B.Sc., Computer Engineering (Software)</strong> — Shomal University, Iran (2006)</li>
+          </ul>
+        </section>
+
+        <section id="experience" class="section section-card">
+          <h2>Research &amp; Industry Experience</h2>
+
+          <div class="exp-block">
+            <h3>Graduate Research &amp; Teaching Assistant — University of Connecticut</h3>
+            <p class="exp-meta">Storrs, CT, USA · 2019&nbsp;–&nbsp;Present</p>
+            <ul class="facts">
+              <li>Design and implement machine learning and Bayesian models for high-throughput sequencing and biological time-series data (e.g., nanopore translocation times).</li>
+              <li>Build data processing pipelines from raw data through feature engineering, model training, and evaluation at scale.</li>
+              <li>Collaborate with interdisciplinary teams (bioinformatics, biology, industry partners) to define requirements and interpret results.</li>
+            </ul>
+          </div>
+
+          <div class="exp-block">
+            <h3>Research Fellow — DEIB, Politecnico di Milano</h3>
+            <p class="exp-meta">Milan, Italy · 2018&nbsp;–&nbsp;2019</p>
+            <ul class="facts">
+              <li>Developed GPU performance prediction models and feature selection methods for large-scale cloud applications (EU H2020 ATMOSPHERE project).</li>
+              <li>Implemented ML pipelines to evaluate and optimize application performance under resource constraints.</li>
+            </ul>
+          </div>
+
+          <div class="exp-block">
+            <h3>R&amp;D Expert / ML Engineer — K4Tech</h3>
+            <p class="exp-meta">Milan, Italy · 2017&nbsp;–&nbsp;2018</p>
+            <ul class="facts">
+              <li>Designed and implemented ML and signal/image processing algorithms for smart home appliances and video analytics (face recognition, fire/smoke detection, virtual makeup).</li>
+              <li>Developed real-time prototypes in Matlab/C for computer vision and surveillance applications.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="publications" class="section section-card">
+          <h2>Publications</h2>
+          <p class="pub-legend">Selected peer-reviewed publications and submissions.</p>
+
+          <div class="pub-filters" role="tablist" aria-label="Filter by year">
+            <button class="chip" role="tab" aria-selected="true"  data-filter="all">All</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="2025">2025</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="2023">2023</button>
+            <button class="chip" role="tab" aria-selected="false" data-filter="2018">2018</button>
+          </div>
+
+          <ul id="pub-list" class="pub-list-simple">
+            <li class="pub" data-year="2025">
+              <span class="pub-year">2025</span> — Bayesian Reconstruction and Differential Testing of Excised Introns.
+            </li>
+            <li class="pub" data-year="2025">
+              <span class="pub-year">2025</span> — pHapCompass: Probabilistic Haplotype Assembly for Diploid and Polyploid Genomes with Uncertainty Quantification.
+            </li>
+            <li class="pub" data-year="2023">
+              <span class="pub-year">2023</span> — Deep Statistical Modelling of Nanopore Sequencing Translocation Times Reveals Latent Non-B DNA Structures.
+            </li>
+            <li class="pub" data-year="2018">
+              <span class="pub-year">2018</span> — A Distributed Feature Selection Algorithm Based on Distance Correlation with an Application to Microarrays.
+            </li>
+          </ul>
+        </section>
+
+        <section id="projects" class="section section-card">
+          <h2>Projects</h2>
+          <div class="project-grid">
+            <article class="project">
+              <div class="project-body">
+                <h3>Non-B DNA Structure Modeling from Nanopore Signals</h3>
+                <p>
+                  Statistical and deep learning models for detecting non-canonical DNA structures from nanopore
+                  translocation times, including large-scale preprocessing and feature engineering on raw sequencing
+                  signals.
+                </p>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-body">
+                <h3>Probabilistic Polyploid Haplotype Assembly (pHapCompass)</h3>
+                <p>
+                  Graph-theoretic and Bayesian algorithms for haplotype assembly in diploid and polyploid genomes,
+                  explicitly modeling read assignment ambiguity and providing uncertainty quantification.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="skills" class="section section-card">
+          <h2>Skills</h2>
+          <ul class="facts">
+            <li><strong>Programming &amp; Tools:</strong> Python, R, Matlab, Java, Spark, Git/GitHub, Linux shell scripting, C/C++ (working knowledge).</li>
+            <li><strong>ML &amp; Statistics:</strong> Deep learning, supervised/unsupervised learning, feature selection, Bayesian inference, probabilistic graphical models.</li>
+            <li><strong>Computational Biology:</strong> Nanopore/PacBio/Illumina data, variant calling, haplotype assembly, omics data integration.</li>
+            <li><strong>ML Frameworks:</strong> PyTorch, TensorFlow, scikit-learn, PyMC3, CUDA-based workflows.</li>
+          </ul>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Back-to-top arrow -->
+  <a href="#top" class="scroll-top" aria-label="Back to top">↑</a>
+
+  <!-- custom cursor ring -->
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+</body>
+</html>
