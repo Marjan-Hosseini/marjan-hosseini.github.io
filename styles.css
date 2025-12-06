@@ -127,6 +127,18 @@
     display:flex;
     flex-direction:column;
   }
+
+  .profile-dna{
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+  }
+  .profile-dna-gif{
+    max-width:160px;  /* adjust size as you like */
+    width:100%;
+    height:auto;
+  }
+
   .profile-main{
     display:flex;
     flex-direction:column;
