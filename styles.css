@@ -129,12 +129,12 @@
   }
 
   .profile-dna{
-    margin-top:10px;
+    margin-top:12px;
     display:flex;
     justify-content:center;
   }
   .profile-dna-gif{
-    max-width:160px;  /* adjust size as you like */
+    max-width:69px;  /* adjust size as you like */
     width:100%;
     height:auto;
   }
